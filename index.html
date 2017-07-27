@@ -14,6 +14,26 @@
         <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
         <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src = "https://maps.googleapis.com/maps/api/js"></script>
+        <!-- MapView -->
+        <script>
+         function loadMap() {
+
+			
+            var mapOptions = {
+               center:new google.maps.LatLng(28.536191, 77.267499),
+               zoom:16
+            }
+				
+            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+            
+            var marker = new google.maps.Marker({
+               position: new google.maps.LatLng(28.536191, 77.267499),
+               map: map,
+               animation:google.maps.Animation.Drop
+            });
+         }
+      </script>
 
         <!-- PAGE LEVEL PLUGIN STYLES -->
         <link href="css/animate.css" rel="stylesheet">
@@ -27,7 +47,7 @@
     <!-- END HEAD -->
 
     <!-- BODY -->
-    <body id="body" data-spy="scroll" data-target=".header">
+    <body id="body" data-spy="scroll" data-target=".header" onload = "loadMap()">
 
         <!--========== HEADER ==========-->
         <header class="header navbar-fixed-top">
@@ -391,6 +411,9 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <div id = "sample"></div>
+        </div>    
         <!-- End Contact -->
         <!--========== END PAGE LAYOUT ==========-->
 
