@@ -15,25 +15,9 @@
         <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
        	<script src="https://apis.mapmyindia.com/advancedmaps/v1/lfiz8qdvbaerbbceuiiq3kferpsgaly7/map_load?v=0.1"></script>
-
-        <script>
-         function loadMap() {
-
-			
-            var mapOptions = {
-               center:new google.maps.LatLng(28.536191, 77.267499),
-               zoom:16
-            }
-				
-            var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
-            
-            var marker = new google.maps.Marker({
-               position: new google.maps.LatLng(28.536191, 77.267499),
-               map: map,
-               animation:google.maps.Animation.Drop
-            });
-         }
-      </script>
+	    <style>
+		    html, body, #map {margin: 0;padding: 0;width: 100%;height: 100%;} 
+	    </style>
 
         <!-- PAGE LEVEL PLUGIN STYLES -->
         <link href="css/animate.css" rel="stylesheet">
@@ -47,7 +31,7 @@
     <!-- END HEAD -->
 
     <!-- BODY -->
-    <body id="body" data-spy="scroll" data-target=".header" onload = "loadMap()">
+    <body id="body" data-spy="scroll" data-target=".header">
 
         <!--========== HEADER ==========-->
         <header class="header navbar-fixed-top">
