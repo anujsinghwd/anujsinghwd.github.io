@@ -14,7 +14,7 @@
         <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
         <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-       <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBfmo0dyeOdrM-wCpLQhii1QkkDKcxxrxk"></script>
+       	<script src="https://apis.mapmyindia.com/advancedmaps/v1/lfiz8qdvbaerbbceuiiq3kferpsgaly7/map_load?v=0.1"></script>
 
         <script>
          function loadMap() {
@@ -420,11 +420,15 @@
         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
             <div id = "sample"></div>
         </div>   
+	    <div id="map"></div>   
         <!-- End Contact -->
         <!--========== END PAGE LAYOUT ==========-->
 
 
-
+	<script>
+	 	var map = new MapmyIndia.Map('map', {center: [28.536657999999999, 77.265511000000103], zoomControl: true, hybrid: true}); 
+		L.marker([28.536657999999999, 77.265511000000103]).addTo(map);
+	 </script>
         <!-- Back To Top -->
         <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
 
