@@ -451,8 +451,10 @@
     </body>
 		 <script language="javascript">
 			function mapper(){	 
-	    	       var map=new MapmyIndia.Map("map",{ center:[28.61, 77.23],zoomControl: true,hybrid:true });
-			 L.marker([28.53669394431180, 77.2656226158142]).addTo(map);
+	    	       var map=new MapmyIndia.Map("map",{ center:[28.53669394431180, 77.2656226158142],zoomControl: true,hybrid:false });
+				
+			L.marker([28.53669394431180, 77.2656226158142]).addTo(map);
+			map.setZoom(16);
 		 }
 	    	</script>
     <!-- END BODY -->
