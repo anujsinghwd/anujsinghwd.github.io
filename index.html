@@ -453,7 +453,9 @@
 			function mapper(){	 
 	    	       var map=new MapmyIndia.Map("map",{ center:[28.53669394431180, 77.2656226158142],zoomControl: true,hybrid:false });
 				
-			L.marker([28.53669394431180, 77.2656226158142]).addTo(map);
+			L.marker([28.53669394431180, 77.2656226158142]).addTo(map)
+				.bindPopup('419, Gali No. 5, govindpuri <br> New Delhi - 110020')
+    				.openPopup();
 			map.setZoom(18);
 		 }
 	    	</script>
